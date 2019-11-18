@@ -1,0 +1,11 @@
+{% block content %}
+
+<h1>Home</h1>
+
+<h1>Jobs:</h1>
+{% for job in jobs %}
+{{ job.title }} - {{ job.url }}
+</br>
+{% endfor %}
+
+{% endblock %}
