@@ -1,10 +1,18 @@
+{% load staticfiles %}
 {% block content %}
 
-<h1>Home</h1>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Home</h1>
+        <img src="{% static 'test.jpg.jpg' %}" height="100">
+        <p class="lead text-muted">Check out some cool job openings below! :)</p>
+    </div>
+</section>
 
 <h1>Jobs:</h1>
 {% for job in jobs %}
 {{ job.title }} - {{ job.url }}
+
 </br>
 {% endfor %}
 
